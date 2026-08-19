@@ -989,6 +989,7 @@ footer {
     }
 
     /* gird 개수 변경 */
+    /* 여기는 다시 생각하자 */
     /* .facility-list-wrap>.spa-fitness>ul,
     .facility-list-wrap>.Convenience>ul {
         grid-template-columns: repeat(5, 1fr);
