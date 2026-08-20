@@ -33,7 +33,6 @@
                         <h1 class="m-logo"><a href="#"><img src="./images/Logo/Haevichi/White.png"
                                     alt="haevichi logo"></a></h1>
                         <p class="re-right"><button class="btn btn-pri">예약하기</button></p>
-
                     </div>
                     <ul class="main-menu">
                         <li>
@@ -373,6 +372,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
         <hr>
         <!-- section*6>div.inner>div.title-box>h2.section-title+div>p+p.more-btn -->
@@ -753,10 +753,10 @@
                 </div>
 
                 <ul class="tab-menu">
-                    <li class="active"><a href="#">Spa & Fitness</a></li>
-                    <li><a href="#">Convenience</a></li>
-                    <li><a href="#">Kids</a></li>
-                    <li><a href="#">Gallery</a></li>
+                    <li class="active"><button>Spa & Fitness</button></li>
+                    <li><button>Convenience</button></li>
+                    <li><button>Kids</button></li>
+                    <li><button>Gallery</button></li>
                 </ul>
 
                 <div class="facility-list-wrap">
@@ -879,8 +879,8 @@
                 </div>
 
                 <ul class="tab-menu">
-                    <li class="active"><a href="#">Service</a></li>
-                    <li><a href="#">Contacts</a></li>
+                    <li class="active"><button>Service<button></li>
+                    <li><button>Contacts</button></li>
                 </ul>
 
                 <div class="concierge-list-wrap">
@@ -1056,7 +1056,10 @@
             navigation: {
                 nextEl: '.room-type-hotel .swiper-button-next',
                 prevEl: '.room-type-hotel .swiper-button-prev'
-            }
+            },
+            fadeEffect: {
+                crossFade: true // 이전 슬라이드가 사라지지 않고 겹치는 문제 해결
+            },
         });
 
         const resortSwiper = new Swiper('.room-type-resort', {
@@ -1072,15 +1075,12 @@
             loop: true,
             slidesPerView: 2.4,
             spaceBetween: 12,
-            // centeredSlides: true,
             breakpoints: {
                 768: {
-
                     spaceBetween: 16,
                     centeredSlides: true,
                 },
                 1279: {
-
                     spaceBetween: 24,
                     centeredSlides: true,
                 },

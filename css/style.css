@@ -308,7 +308,7 @@ header:hover .lang-btn>a::after {
     width: 100%;
 }
 
-/* reservation-wrap 너비 1440 반투명50% , 겹치게 가운데 아래 붙이기 left, bottom, transform, 
+/* reservation-wrap 너비 1400 반투명50% , 겹치게 가운데 아래 붙이기 left, bottom, transform, 
 자식을 옆으로 붙이로 붙이고 양쪽정렬 
 padding 위아래 20 좌우 32*/
 .reservation-wrap {
@@ -389,7 +389,7 @@ section {
 .title-box .section-title {
     font-family: "Minion";
     font-size: 3.38em;
-    font-weight: 400;
+    /* font-weight: 400; */
     text-transform: uppercase;
 }
 
@@ -813,6 +813,7 @@ section {
 .membership-wrap {
     padding: 60px 0;
     background: #C5DFF4;
+    margin-top: 10em;
 }
 
 .membership-wrap>.inner {
@@ -967,105 +968,110 @@ footer {
     #main-nav {
         position: fixed;
         right: -100%;
-        background:rgba(255,255,255,0.5);
-        width:100%;
-        height:100vh;
-        top:0;
-        padding:1em 1.5em;
+        background: rgba(255, 255, 255, 0.8);
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        padding: 1em 1.5em;
     }
-    .main-menu{
-        display:block;
-        
+
+    .main-menu {
+        display: block;
     }
-    .main-menu>li>a{
-        padding:1em 0;
-        border-bottom:1px solid var(--Neutral-300);
-        color:var(--Neutral-900);
+
+    .main-menu>li>a {
+        padding: 1em 0;
+        border-bottom: 1px solid var(--Neutral-300);
+        color: var(--Neutral-900);
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    .main-menu>li>a::after{
-        content:"\E801";
-        font-family: "fontello";
-        font-size:0.7em;
-        
 
+    .main-menu>li>a::after {
+        content: "\E802";
+        font-family: "fontello";
+        font-size: 0.7em;
     }
+
     .main-menu>li:hover>a::after,
-    .main-meni>li.active>a::after{
-        content:"\e802";
+    .main-menu>li.active>a::after {
+        content: "\e803";
     }
-    .depth2{
+
+    .depth2 {
         position: static;
-        display:none;
+        display: none;
         text-indent: 2.4em;
-        
     }
-    .depth2>li{
-        width:100%;
+
+    .depth2>li {
+        width: 100%;
     }
-    .mian-menu>li:hover .depth2{
+
+    .main-menu>li:hover .depth2 {
         display: block;
     }
-    .depth3{
-        display:none;
-        text-indent:4em;
+
+    .depth3 {
+        display: none;
+        text-indent: 4em;
     }
 
-
     /* 보여주기 */
-    .ham-btn{
+    .ham-btn {
         display: block;
         width: 32px;
     }
+
     .m-header,
-    .m-gnb-list{
-        display:flex;
+    .m-gnb-list {
+        display: flex;
         justify-content: space-between;
-        color:var(--Neutral-900);
+        color: var(--Neutral-900);
     }
-    .m-header .m-logo img{
-        filter:invert();
+
+    .m-header .m-logo img {
+        filter: invert();
         width: 100px;
-
     }
 
 
-    .close-btn .icon-x{
-        color:#000;
-        font-size:2em;
+    .close-btn .icon-x {
+        color: #000;
+        font-size: 2em;
     }
 
-    .m-gnb-list{
-
+    .m-gnb-list {
+        margin-top: 2em;
     }
-    .m-gnb-list>li>a{
-        display:flex;
-        gap:0.5em;
+
+    .m-gnb-list>li>a {
+        display: flex;
+        gap: 0.5em;
         align-items: center;
     }
-    .m-gnb-list>li>a img{
+
+    .m-gnb-list>li>a img {
         width: 2em;
     }
 
-
-    /* header , main-menu */
+    /* header main-menu */
     /* reservation 안의 고정값 해결 */
     .reservation-wrap {
         display: none;
     }
 
     section {
-        padding-top: 10vw
+        padding-top: 10vw;
     }
 
     .dining-list>li .text-box {
         padding: clamp(24px, 10vw, 70px) clamp(24px, 8vw, 50px);
     }
 
-    /* gird 개수 변경 */
-    /* 여기는 다시 생각하자 */
+    /* grid 개수 변경 */
+    /* 여기는 다시 생가하자 */
     /* .facility-list-wrap>.spa-fitness>ul,
     .facility-list-wrap>.Convenience>ul {
         grid-template-columns: repeat(5, 1fr);
@@ -1076,27 +1082,29 @@ footer {
         grid-row: 1/2;
     }
 
-    .facility-list-wrap>.spa-fitness>ul>li:first-child(2) {
-        grid-column: 1/3;
+    .facility-list-wrap>.spa-fitness>ul>li:nth-child(2) {
+        grid-column: 1/4;
         grid-row: 2/3;
     }
 
-    .facility-list-wrap>.spa-fitness>ul>li:first-child(3) {
-        grid-column: 5/7;
+    .facility-list-wrap>.spa-fitness>ul>li:nth-child(3) {
+        grid-column: 4/6;
     }
 
-    .facility-list-wrap>.spa-fitness>ul>li:first-child(4) {
-        grid-column: 5/7;
+    .facility-list-wrap>.spa-fitness>ul>li:nth-child(4) {
+        grid-column: 4/6;
     }
 
     .facility-list-wrap>.spa-fitness>ul .img-box {
         height: 100%;
     }
 
-    .facility-list-wrap>.spa-fitness>ul .img-box img{
+    .facility-list-wrap>.spa-fitness>ul .img-box img {
         height: 100%;
         object-fit: cover;
     } */
+
+
 }
 
 /* 모바일 */
@@ -1122,10 +1130,10 @@ footer {
     }
 
     .main-slider-list>li .img-box {
-        height: 90vh;
+        height: 100vh;
     }
 
-    .main-slider-list>li .img-box img {
+    .main-slider-list>li .img-box>img {
         height: 100%;
         object-fit: cover;
     }
@@ -1135,7 +1143,7 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .facility-list-wrap>.spa-fitness>ul.li:first-child,
+    .facility-list-wrap>.spa-fitness>ul>li:first-child,
     .facility-list-wrap>.Convenience>ul>li:first-child {
         grid-column: 1/3;
         grid-row: 1/2;
@@ -1147,9 +1155,6 @@ footer {
         grid-column: 1/3;
     }
 
-
-
-
     .dining-list>li .text-box {
         /* padding:5vw; */
         display: flex;
@@ -1160,7 +1165,7 @@ footer {
         padding: 0;
     }
 
-    .dining-list>li .text-box> {
+    .dining-list>li .text-box>p {
         display: none;
     }
 
@@ -1185,7 +1190,7 @@ footer {
 
     .membership-card>li:first-child>a {}
 
-    .membership-card>li:last-child.a {}
+    .membership-card>li:last-child>a {}
 
     .membership-card>li>a img {
         width: 100%;
@@ -1202,7 +1207,7 @@ footer {
     /* main */
     .main-slider-list>li .img-box {}
 
-    /* offer */
+    /* .offer */
     .offer-list>li {
         flex: 0 0 calc((100% - 1em) / 2)
     }
@@ -1220,7 +1225,7 @@ footer {
         padding: 2em 0;
     }
 
-    .fooer-logo {
+    .footer-logo {
         width: 100px;
     }
 
@@ -1234,10 +1239,8 @@ footer {
         flex-direction: column;
     }
 
-
     .address-wrap .address-right {
         text-align: left;
-
     }
 
     .ks-family-wrap {
@@ -1247,6 +1250,6 @@ footer {
     .copy-sns-wrap {
         flex-direction: column;
         gap: 1em;
-
     }
+
 }
